@@ -43,5 +43,6 @@ while(in1!=eof)
 }
 sort(v.begin(),v.end());
 copy(v.begin(),v.end(),out1);*/
+
 return 0;
 }
