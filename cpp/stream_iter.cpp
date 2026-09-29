@@ -8,7 +8,7 @@ using namespace std;
 #include<fstream>
 int main()
 {
-  /*  {
+   {
         ofstream out0("file1");
         out0<<"1 2 3 4 5 6 7 8 9 10";
     }
@@ -31,18 +31,19 @@ while(in!=eof)
         *out1++=*in;
         in++;
     }
-}*/
-/*istream_iterator<int> in1(cin);
-istream_iterator<int> eof;
-ostream_iterator<int> out1(cout," ");
+}
+
+istream_iterator<int> in1(cin);
+istream_iterator<int> eof1;
+ostream_iterator<int> out3(cout," ");
 vector<int> v;
-while(in1!=eof)
+while(in1!=eof1)
 {
     v.push_back(*in1);
     in1++;      
 }
 sort(v.begin(),v.end());
-copy(v.begin(),v.end(),out1);*/
+copy(v.begin(),v.end(),out3);
 
 return 0;
 }
