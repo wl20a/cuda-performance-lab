@@ -9,6 +9,7 @@ using namespace std;
 #include <numeric>
 int main()
 {
+ 
     ifstream in("data.txt");
     
     vector<double>v;
@@ -22,7 +23,7 @@ int main()
     }
     auto max=max_element(v.begin(),v.end());
     auto min=min_element(v.begin(),v.end());
-    cout<<*max<<" "<<*min<<endl;
+    cout<<*max<<" "<<"与"<<" "<<*min<<endl;
     double sum=accumulate(v.begin(),v.end(),0.0);
     cout<<sum/v.size()<<endl;
     copy(v.begin(),v.end(),back_inserter(v1));

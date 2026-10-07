@@ -22,3 +22,5 @@ add_executable(analyzer data.cpp)
 
 # 练习专用：故意写崩的程序，Day 14 用 gdb 抓它
 add_executable(segfault src/segfault.cpp)
+#我在学习cmake
+

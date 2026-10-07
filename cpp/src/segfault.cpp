@@ -8,8 +8,8 @@ void level3(int* p) {
 }
 
 void level2() {
-    int* p = nullptr;
-    level3(p);
+    int val=0;
+    level3(&val);
 }
 
 void level1() {
