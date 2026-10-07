@@ -17,10 +17,7 @@ if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Debug)
 endif()
 
-# 头文件搜索路径：这样源码里才能直接写 #include "stats.h"
-include_directories(include)
-
-# 生成可执行文件 analyzer，由两个源文件组成（add_executable(名字 参与编译的文件...))
+# 生成可执行文件 analyzer，由 data.cpp 编译而来（add_executable(名字 参与编译的文件...))
 add_executable(analyzer data.cpp)
 
 # 练习专用：故意写崩的程序，Day 14 用 gdb 抓它
