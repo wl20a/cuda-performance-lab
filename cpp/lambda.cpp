@@ -6,7 +6,7 @@ using namespace std;
 #include<list>
 #include<iterator>
 #include<fstream>
-void biggest(vector<string>&s,vector<string>::size_type sz)
+/*void biggest(vector<string>&s,vector<string>::size_type sz)
 {
     sort(s.begin(),s.end());
     auto it =unique(s.begin(),s.end());
@@ -17,7 +17,7 @@ void biggest(vector<string>&s,vector<string>::size_type sz)
     cout<<count<<endl;
     for_each(af,s.end(),[](const string &a){cout<<a<<" ";});
 
-}
+}*/
 int main()
 {
     /*
@@ -33,6 +33,7 @@ int main()
     b<<sum(5)<<endl;
     b<<sum(15)<<endl;
     */
+   
 
         
     return 0;

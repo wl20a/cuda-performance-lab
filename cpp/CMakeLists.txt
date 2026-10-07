@@ -21,7 +21,7 @@ endif()
 include_directories(include)
 
 # 生成可执行文件 analyzer，由两个源文件组成（add_executable(名字 参与编译的文件...))
-add_executable(analyzer src/main.cpp src/stats.cpp)
+add_executable(analyzer data.cpp)
 
 # 练习专用：故意写崩的程序，Day 14 用 gdb 抓它
 add_executable(segfault src/segfault.cpp)
