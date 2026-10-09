@@ -22,6 +22,9 @@ __global__ void showid()
       
 int main() {
     showid<<<2,4>>>();
+  
     cudaDeviceSynchronize();  //结束异步
+    
+
     return 0;
 }

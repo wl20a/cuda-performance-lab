@@ -10,6 +10,7 @@ using namespace std;
 #include<memory>
 #include <cuda_runtime.h>
 const int n=6;
+
 //映射
 
 __global__ void vecadd(const float* a, const float* b, float* c, int n) 
@@ -34,7 +35,9 @@ int main() {
     cudaMemcpy(db,b,n*sizeof(float),cudaMemcpyHostToDevice);
 
     vecadd<<<(n+3)/4,4>>>(da,db,dc,n);
+    cudaGetLastError(); 
     cudaMemcpy(c,dc,n*sizeof(float),cudaMemcpyDeviceToHost);
+    cudaDeviceSynchronize(); 
 
      for (int i = 0; i < n; i++)
         printf("%.0f + %.0f = %.0f\n", a[i], b[i], c[i]);
@@ -45,6 +48,7 @@ int main() {
      cudaFree(dc);   
 
 
-    cudaDeviceSynchronize();  //结束异步
+    cout<<endl;
+
     return 0;
 }
