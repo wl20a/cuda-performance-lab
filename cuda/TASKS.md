@@ -43,7 +43,7 @@ ls /usr/local/ | grep cuda
 - [ ] 故意用 `g++ hello_cuda.cu` 编一次，看看报什么错（见怪不怪即可）
 - [ ] `git commit -m "Week3: 第 2 关"`
 
-## 第 3 关 · 第一个 kernel（Day 16）
+## 第 3 关 · 第一个 kernel（Day 16）                         OK
 
 写 `cuda/src/hello_kernel.cu`：`__global__ void hello()` 打印自己的 block/thread 编号，
 `<<<2, 4>>>` 启动，启动后 `cudaDeviceSynchronize()` 再收尾（完整模板见手册第四部分）。
@@ -52,7 +52,7 @@ ls /usr/local/ | grep cuda
 - [ ] 能解释 `<<<grid, block>>>` 两个参数各是什么
 - [ ] 能说出 kernel 体里的代码被"复制执行"了几遍
 
-## 第 4 关 · 执行配置实验（Day 16）
+## 第 4 关 · 执行配置实验（Day 16）                       OK
 
 同一个程序改 4 种启动方式各跑一次：`<<<1,1>>>`、`<<<1,8>>>`、`<<<2,4>>>`、`<<<4,2>>>`。
 每种都先在纸上猜输出行数和内容，再跑验证。最后连跑两次 `<<<2,4>>>` 对比输出顺序。
@@ -61,7 +61,7 @@ ls /usr/local/ | grep cuda
 - [ ] 亲眼见到：同样的程序两次运行输出顺序可能不同（并行、乱序、正常）
 - [ ] 能心算：总执行次数 = grid × block
 
-## 第 5 关 · 四变量卡（Day 17）
+## 第 5 关 · 四变量卡（Day 17）                     OK
 
 写 `cuda/src/variables.cu`：`<<<3, 4>>>` 启动一个 kernel，
 打印 `threadIdx.x / blockIdx.x / blockDim.x / gridDim.x` 四个值，并加一列"我的全局编号"。
@@ -80,7 +80,7 @@ ls /usr/local/ | grep cuda
 - [ ] 能口述：4 个内置变量在这个 kernel 里各自扮演什么角色
 - [ ] `git commit -m "Week3: vector_add 完成（本周主交付）"`
 
-## 第 7 关 · ceil div 实验（Day 18）
+## 第 7 关 · ceil div 实验（Day 18）               OK
 
 把 vector_add 的 N 改三次跑三次：1000、1001、1024（block 恒为 256）。
 每次先在纸上算 grid = (N + 256 - 1) / 256 和"总线程数 - N = 多少个闲线程"，再跑验证。
