@@ -59,13 +59,13 @@ int main()
     CUDA_CHECK(cudaMemcpy(dB,hB,n*sizeof(float),cudaMemcpyHostToDevice));
 
 
-    const int sizes[] = {128, 256, 512, 1024};
+    const int sizes[] = {96,128, 256, 512, 1024};
     const int REPEAT = 20;
 
       printf("block |  grid  | 平均耗时 | 有效带宽\n");
     printf("------+--------+----------+----------\n");
 
-    for(int k=0;k<4;k++)
+    for(int k=0;k<5;k++)
     {
         int bs=sizes[k];
         int grid=(n+bs-1)/bs;
