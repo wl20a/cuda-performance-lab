@@ -39,7 +39,7 @@ int main()
     cudaEventRecord(a);
     for(int i=0;i<20;i++)
     {
-       squadLeader<<<4, 128>>>();
+       squadLeader<<<2, 128>>>();
     }
     cudaEventRecord(b);
     cudaEventSynchronize(b);
